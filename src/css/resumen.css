@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+  display: flex;
+}
+
+body div.contenedor{
+  margin: auto;
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: solid 1px #ddd;
+}
+
+div div.logo img#logo{
+  display: block;
+  width: 200px;
+  margin: auto;
+}
+
+div.center{
+  text-align: center;
+  padding-top: 10px;
+}
+
+div.table{
+  overflow-x: auto;
+
+}
+
+div.total{
+  text-align: right;
+
+}
+
+section{
+  margin-bottom: 20px;
+}
+section table{
+  border-collapse: collapse;
+
+}
+section table thead tr th{
+  background-color: black;
+  padding: 5px 5px;
+  color: white;
+}
+
+section table{
+  min-width: 30%;
+  border: 1px solid black;
+}
+
+table tbody tr td{
+  padding: 5px;
+}
+
+table tfoot tr td{
+  padding: 5px;
+  font-weight: bold;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+table tbody tr:nth-child(even){
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(odd){
+  border-bottom-style: solid;
+  border-bottom: 1px solid #ddd;
+}
+
+td.center, td.money{
+  text-align: center;
+}
+
+td.money::before{
+  content: "$ ";
+}
+
+div.btn_center{
+  text-align: center;
+}
+
+
+
+tbody td button{
+  width: 40px;
+  border-radius: 5px;
+}
+
+input#agregar_eventos, input#editar_eventos ,input.update{
+  display: inline-block;
+  width: 50px;
+  border-radius: 5px;
+  /* display: block; */
+}
+
+input.hours,
+input[type="submit"]{
+  width: 100%;
+  text-align: center;
+}
+
+.edit_hours{
+  width: 100%;
+  text-align: center;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+table thead th,
+td.event_edit{
+  width: 40px;
+  max-width: 40px;
+  min-width: 40px;
+}
+
+tr.nueva_fila td select{
+  width: 98%;
+}
+
+td.event_edit input[type="number"]{
+  width: 98%;
+}
+
+td.ocupation, th.ocupation{
+  min-width: 100px;
+}
+
+td.site{
+  min-width: 100px;
+}
+
+tr.nueva_fila td input, tr.nueva_fila td{
+  max-width: 40px;
+  text-align: center;
+}
+
+input#btn_submit{
+  width: 40px;
+  border-radius: 5px;
+}
+
+#row_add_event{
+  display: none;
+}
+
+input#search_employee{
+  min-width: 195px;
+
+}
+
+td.employee_name{
+  min-width: 200px;
+}
+
+.clearFix::after,
+.clearFix::before {
+  content: "";
+  display: table;
+}
+
+.clearFix::after{
+  clear: both;
+}
+
+
+@media print{
+  .btn_center{
+    display: none;
+  }
+
+  body div.contenedor{
+    margin: auto;
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    border: solid 0px #ddd;
+  }
+}
