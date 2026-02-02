@@ -11,3 +11,5 @@ RUN echo "shot_open_tag=On" >> /usr/local/etc/php/php.ini \
  && echo "register_globals=Off" >> /usr/local/etc/php/php.ini \
  && echo "magic_quotes_gpc=Off" >> /usr/local/etc/php/php.ini
 
+COPY src/ /var/www/html
+

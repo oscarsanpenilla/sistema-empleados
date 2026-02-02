@@ -2,12 +2,13 @@ version: '3.8'
 
 services:
   php:
-    build: ./docker/php
+#    build: ./docker/php
+    image: oscarspdev/devops-course:sanvan_php-1.0
     container_name: php
     ports:
       - "8000:80"
-    volumes:
-      - ./src:/var/www/html
+#    volumes:
+#      - ./src:/var/www/html
     depends_on:
       - mysql
 
@@ -18,8 +19,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: sanvan_data
-#      MYSQL_USER:
-#      MYSQL_PASSWORD:
     ports:
       - "3306:3306"
     volumes:
